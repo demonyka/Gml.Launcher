@@ -157,6 +157,8 @@ public class OverviewPageViewModel : PageViewModelBase
     {
         await _storageService.SetAsync<IUser?>(StorageConstants.User, null);
         _mainViewModel.Router.Navigate.Execute(new LoginPageViewModel(_mainViewModel, _onClosed));
+
+        Environment.Exit(0);
     }
 
     private async Task StartGame(CancellationToken cancellationToken)
