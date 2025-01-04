@@ -57,6 +57,7 @@
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.0" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.2.1" />
     <PackageReference Include="System.Management" Version="9.0.0" />
+    <PackageReference Include="Dotnet.Bundle" Version="*" />
   </ItemGroup>
 
 
@@ -86,7 +87,6 @@
     <ProjectReference Include="..\GamerVII.Notification.Avalonia\GamerVII.Notification.Avalonia\GamerVII.Notification.Avalonia.csproj"/>
     <ProjectReference Include="..\Gml.Client\src\Gml.Client\Gml.Client.csproj" />
     <ProjectReference Include="..\L1.Avalonia.Gif\L1.Avalonia.Gif.csproj"/>
-    <PackageReference Include="Dotnet.Bundle" Version="*" />
   </ItemGroup>
 
 
