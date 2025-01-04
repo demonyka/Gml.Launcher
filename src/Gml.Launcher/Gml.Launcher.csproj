@@ -22,6 +22,7 @@
     <CFBundleSignature>????</CFBundleSignature>
     <NSPrincipalClass>NSApplication</NSPrincipalClass>
     <NSHighResolutionCapable>true</NSHighResolutionCapable>
+    <CFBundleShortVersionString>Major</CFBundleShortVersionString>
     <CFBundleExecutable>MiNEON</CFBundleExecutable>
   </PropertyGroup>
 
