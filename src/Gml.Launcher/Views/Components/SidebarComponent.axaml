@@ -43,15 +43,6 @@
                             <controls:ServerListComponent DataContext="{TemplateBinding ListViewModel}" />
 
                         </StackPanel>
-
-                        <controls:GmlButton Grid.Row="4"
-                                            Classes="Icon Secondary"
-                                            Command="{TemplateBinding LogoutCommand}"
-                                            Width="60"
-                                            Height="60"
-                                            IconPath="/Assets/Images/logout.svg"
-                                            IconSize="20" />
-
                     </Grid>
                 </Border>
 

@@ -24,14 +24,6 @@
                                      Spacing="20">
 
             <StackPanel Classes="MarginBottom">
-
-                <components:LogoComponent Classes="TextLogo"
-                                          HorizontalAlignment="Center" />
-            </StackPanel>
-
-            <Border Classes="Separator" />
-
-            <StackPanel Classes="MarginBottom">
                 <TextBlock Text="{x:Static lang:Resources.Login}"
                            Classes="FormText" />
                 <TextBox Classes="FormBox" Text="{Binding Login}" />

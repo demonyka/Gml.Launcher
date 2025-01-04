@@ -290,5 +290,11 @@ namespace Gml.Launcher.Assets.Resources {
                 return ResourceManager.GetString("VpnUse", resourceCulture);
             }
         }
+
+        public static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
     }
 }

@@ -41,6 +41,7 @@
                                        Grid.Row="1"
                                        Grid.ColumnSpan="3"
                                        Grid.RowSpan="4"
+                                       LogoutCommand="{Binding LogoutCommand}"
                                        PlayCommand="{Binding PlayCommand}"
                                        SettingsCommand="{Binding GoSettingsCommand}"
                                        IsVisible="{Binding ListViewModel.HasSelectedItem}"
@@ -51,8 +52,9 @@
                                        State="{Binding ListViewModel.SelectedProfile.State}"
                                        CreateDate="{Binding ListViewModel.SelectedProfile.CreateDate}"
                                        Status="{x:Static lang:Resources.Available}"
-                                       VerticalAlignment="Center"
+                                       VerticalAlignment="Bottom"
                                        HorizontalAlignment="Center"
+                                       Margin="0 0 0 80"
                 />
 
                 <!-- Footer -->
@@ -102,7 +104,6 @@
         <components:SidebarComponent Grid.Column="1"
                                      HorizontalAlignment="Left"
                                      ListViewModel="{Binding ListViewModel}"
-                                     LogoutCommand="{Binding LogoutCommand}"
                                      HomeCommand="{Binding HomeCommand}"
                                      ProfileCommand="{Binding GoProfileCommand}" />
 

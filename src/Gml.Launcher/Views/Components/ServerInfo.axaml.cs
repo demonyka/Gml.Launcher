@@ -42,6 +42,10 @@ public class ServerInfo : TemplatedControl
     public static readonly StyledProperty<DateTime> CreateDateProperty = AvaloniaProperty.Register<ServerInfo, DateTime>(
         nameof(CreateDate));
 
+    public static readonly StyledProperty<ICommand> LogoutCommandProperty =
+        AvaloniaProperty.Register<ServerInfo, ICommand>(
+            nameof(LogoutCommand));
+
     public DateTime CreateDate
     {
         get => GetValue(CreateDateProperty);
@@ -100,5 +104,11 @@ public class ServerInfo : TemplatedControl
     {
         get => GetValue(ProfileNameProperty);
         set => SetValue(ProfileNameProperty, value);
+    }
+
+    public ICommand LogoutCommand
+    {
+        get => GetValue(LogoutCommandProperty);
+        set => SetValue(LogoutCommandProperty, value);
     }
 }

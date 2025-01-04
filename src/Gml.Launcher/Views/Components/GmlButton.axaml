@@ -168,12 +168,10 @@
                                HorizontalAlignment="Center"
                                FontFamily="{StaticResource MinecraftFont}"
                                Foreground="{DynamicResource HeadlineColor}">
-
                         <TextBlock.Effect>
                             <DropShadowDirectionEffect
                                 ShadowDepth="3"
                                 Direction="35"
-
                                 Color="Black"
                                 Opacity="0.5"
                                 BlurRadius="0"/>

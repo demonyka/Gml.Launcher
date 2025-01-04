@@ -34,6 +34,13 @@
                                             FontSize="16"
                                             Width="400"
                                             Text="{x:Static lang:Resources.Settings}" />
+
+                        <controls:GmlButton Classes="Text Minecraft"
+                                            Command="{TemplateBinding LogoutCommand}"
+                                            FontSize="16"
+                                            Width="400"
+                                            Margin="0 60 0 0"
+                                            Text="{x:Static lang:Resources.Exit}" />
                     </StackPanel>
                 </StackPanel>
             </ControlTemplate>
