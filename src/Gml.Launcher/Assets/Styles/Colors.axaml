@@ -21,6 +21,10 @@
     <SolidColorBrush x:Key="FormBorderColor">#212121</SolidColorBrush>
     <SolidColorBrush x:Key="FormBorderHoverColor">#2C2C2C</SolidColorBrush>
 
+    <SolidColorBrush x:Key="MinecraftBackground">#737373</SolidColorBrush>
+    <SolidColorBrush x:Key="MinecraftHoveredBackground">#6F94B7</SolidColorBrush>
+
+
 
     <SolidColorBrush x:Key="BadgeBorder">#20FFFFFF</SolidColorBrush>
 

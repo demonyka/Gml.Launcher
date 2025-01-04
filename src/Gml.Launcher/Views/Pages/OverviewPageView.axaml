@@ -21,23 +21,11 @@
                                         Grid.ColumnSpan="2"
                                         converters:AsyncStreamToImageLoader.Source="{Binding ListViewModel.SelectedProfile.Background}" />
 
-        <Rectangle Grid.Column="0"
-                   Grid.ColumnSpan="2"
-                   Opacity=".5"
-                   Fill="{DynamicResource BackgroundOverlay}" />
-
         <!-- Content -->
         <Border Grid.Column="1" Padding="25">
 
-            <Grid ColumnDefinitions="Auto, 30, *"
+            <Grid ColumnDefinitions="Auto, 60, *"
                   RowDefinitions="60, 30 *, 30, Auto">
-
-                <components:OnlineComponent
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Online="{Binding ListViewModel.SelectedProfile.Servers,
-                    Converter={converters:SumServersOnlineConverter}}"
-                    VerticalAlignment="Center" />
 
                 <components:ProgressBar Grid.Row="0"
                                         Grid.Column="0"
@@ -50,7 +38,9 @@
                 <!-- Server Info -->
                 <components:ServerInfo Grid.Column="0"
                                        Classes.Animated="{Binding ListViewModel.HasSelectedItem}"
-                                       Grid.Row="2"
+                                       Grid.Row="1"
+                                       Grid.ColumnSpan="3"
+                                       Grid.RowSpan="4"
                                        PlayCommand="{Binding PlayCommand}"
                                        SettingsCommand="{Binding GoSettingsCommand}"
                                        IsVisible="{Binding ListViewModel.HasSelectedItem}"
@@ -61,7 +51,9 @@
                                        State="{Binding ListViewModel.SelectedProfile.State}"
                                        CreateDate="{Binding ListViewModel.SelectedProfile.CreateDate}"
                                        Status="{x:Static lang:Resources.Available}"
-                                       VerticalAlignment="Center" />
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                />
 
                 <!-- Footer -->
                 <Grid Grid.Row="4"
@@ -69,30 +61,32 @@
                       Grid.ColumnSpan="3"
                       ColumnDefinitions="Auto, *, Auto">
 
-                    <components:GmlButton Grid.Column="0"
-                                          IconPath="/Assets/Images/document.svg"
-                                          IconSize="22"
-                                          Classes="TextIcon Additional"
-                                          Text="{x:Static lang:Resources.ModsList}" />
-
                     <StackPanel Grid.Column="2"
-                                Orientation="Horizontal"
+                                Orientation="Vertical"
                                 Spacing="10">
 
-                        <components:GmlButton IconPath="/Assets/Images/vk.svg"
+                        <components:GmlButton IconPath="/Assets/Images/discord.svg"
                                               IconSize="24"
                                               Padding="0, 2, 0, 0"
                                               Command="{Binding OpenLinkCommand}"
-                                              CommandParameter="https://vk.com/recloud.studio"
+                                              CommandParameter="https://discord.gg/zXEbCfuH6N"
                                               Classes="Icon Additional"
                                               Text="{x:Static lang:Resources.Website}" />
 
-                        <components:GmlButton IconPath="/Assets/Images/app.svg"
-                                              IconSize="22"
+                        <components:GmlButton IconPath="/Assets/Images/youtube.svg"
+                                              IconSize="24"
+                                              Padding="0, 2, 0, 0"
                                               Command="{Binding OpenLinkCommand}"
-                                              CommandParameter="https://recloud.tech"
-                                              Padding="15, 0, 15, 0"
-                                              Classes="TextIcon Additional"
+                                              CommandParameter="https://www.youtube.com/@mineon-official"
+                                              Classes="Icon Additional"
+                                              Text="{x:Static lang:Resources.Website}" />
+
+                        <components:GmlButton IconPath="/Assets/Images/telegram.svg"
+                                              IconSize="24"
+                                              Padding="0, 2, 0, 0"
+                                              Command="{Binding OpenLinkCommand}"
+                                              CommandParameter="https://t.me/mineon_official"
+                                              Classes="Icon Additional"
                                               Text="{x:Static lang:Resources.Website}" />
 
                     </StackPanel>
@@ -104,7 +98,8 @@
         </Border>
 
         <!-- Sidebar -->
-        <components:SidebarComponent Grid.Column="0"
+        <components:SidebarComponent Grid.Column="1"
+                                     HorizontalAlignment="Left"
                                      ListViewModel="{Binding ListViewModel}"
                                      LogoutCommand="{Binding LogoutCommand}"
                                      HomeCommand="{Binding HomeCommand}"

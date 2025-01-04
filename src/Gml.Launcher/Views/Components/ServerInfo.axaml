@@ -20,54 +20,19 @@
             <ControlTemplate>
                 <StackPanel Spacing="{TemplateBinding Spacing}"
                             MaxWidth="{TemplateBinding MaxWidth}"
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Left">
-                    <StackPanel Orientation="Horizontal" Spacing="8">
-                        <controls:BadgeComponent Text="{TemplateBinding Status}"
-                                                 FontSize="14"
-                                                 FontWeight="Medium" />
-                        <controls:BadgeComponent Text="{TemplateBinding Property=GameVersion}"
-                                                 FontSize="14"
-                                                 FontWeight="Medium" />
-                        <controls:BadgeComponent Text="{TemplateBinding State}"
-                                                 FontSize="14"
-                                                 FontWeight="Medium" />
-                        <!-- <controls:BadgeComponent Text="{TemplateBinding LaunchVersion}" -->
-                        <!--                          FontSize="14" -->
-                        <!--                          FontWeight="Medium" /> -->
-                    </StackPanel>
-                    <TextBlock Text="{TemplateBinding ProfileName}"
-                               Foreground="{TemplateBinding Foreground}"
-                               TextWrapping="Wrap"
-                               FontWeight="Black"
-                               FontSize="{TemplateBinding FontSize}" />
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center">
 
-                    <TextBlock Text="{TemplateBinding ProfileDescription}"
-                               Foreground="{DynamicResource ContentColor}"
-                               FontWeight="Medium"
-                               LineHeight="25"
-                               TextWrapping="Wrap"
-                               FontSize="14" />
-
-                    <!-- <TextBlock Text="{TemplateBinding CreateDate}" -->
-                    <!--            Foreground="{DynamicResource ContentColor}" -->
-                    <!--            FontWeight="Medium" -->
-                    <!--            LineHeight="25" -->
-                    <!--            TextWrapping="Wrap" -->
-                    <!--            FontSize="14" /> -->
-
-                    <StackPanel Spacing="10" Orientation="Horizontal">
-                        <controls:GmlButton Classes="TextIcon Primary"
-                                            IconPath="/Assets/Images/login.svg"
+                    <StackPanel Spacing="10" Orientation="Vertical">
+                        <controls:GmlButton Classes="Text Minecraft"
                                             Command="{TemplateBinding PlayCommand}"
-                                            IconSize="24"
                                             FontSize="16"
-                                            Text="{x:Static lang:Resources.Play}" />
-                        <controls:GmlButton Classes="TextIcon Secondary"
+                                            Width="400"
+                                            Text="{x:Static lang:Resources.Play}"/>
+                        <controls:GmlButton Classes="Text Minecraft"
                                             Command="{TemplateBinding SettingsCommand}"
-                                            IconPath="/Assets/Images/settings.svg"
-                                            IconSize="24"
                                             FontSize="16"
+                                            Width="400"
                                             Text="{x:Static lang:Resources.Settings}" />
                     </StackPanel>
                 </StackPanel>

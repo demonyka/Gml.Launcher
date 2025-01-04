@@ -25,7 +25,7 @@
     <value>Password</value>
   </data>
   <data name="Play" xml:space="preserve">
-    <value>Play</value>
+    <value>Start game</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
@@ -149,5 +149,8 @@
   </data>
   <data name="Information" xml:space="preserve">
     <value>Information</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
   </data>
 </root>

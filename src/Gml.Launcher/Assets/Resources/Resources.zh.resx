@@ -146,4 +146,7 @@
   <data name="Information" xml:space="preserve">
     <value>信息</value>
   </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
 </root>

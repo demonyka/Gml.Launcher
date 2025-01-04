@@ -9,6 +9,7 @@
                 <ResourceInclude Source="Assets/Styles/Colors.axaml" />
             </ResourceDictionary.MergedDictionaries>
             <FontFamily x:Key="ManropeFont">avares://Gml.Launcher/Assets/Fonts#Manrope</FontFamily>
+            <FontFamily x:Key="MinecraftFont">avares://Gml.Launcher/Assets/Fonts#Minecraft</FontFamily>
         </ResourceDictionary>
     </Application.Resources>
 

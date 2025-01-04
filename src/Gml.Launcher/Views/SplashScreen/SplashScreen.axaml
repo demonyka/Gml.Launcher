@@ -27,13 +27,13 @@
         <Grid>
             <StackPanel VerticalAlignment="Center">
                 <components:LogoComponent Classes="TextLogo"
-                                          HorizontalAlignment="Center" />
+                                          HorizontalAlignment="Center" Size="128" />
 
                 <ProgressBar IsIndeterminate="{Binding InfinityLoading}"
                              Value="{Binding Progress}"
                              Maximum="100"
                              Classes="ProgressBar"
-                             Margin="60, 20"
+                             Margin="60, 0"
                              Height="1"
                              VerticalAlignment="Bottom" />
 

@@ -15,6 +15,7 @@
                 <controls:GmlButton Classes="TextIcon Secondary" />
                 <controls:GmlButton Classes="TextIcon Additional" />
                 <controls:GmlButton Classes="Text Additional" />
+                <controls:GmlButton Classes="Text Minecraft" />
             </StackPanel>
         </Border>
     </Design.PreviewWith>
@@ -82,6 +83,7 @@
                              Height="{TemplateBinding IconSize}" />
                         <TextBlock Text="{TemplateBinding Text}"
                                    VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
                                    FontWeight="{TemplateBinding FontWeight}"
                                    Foreground="{DynamicResource HeadlineColor}" />
                     </StackPanel>
@@ -141,8 +143,57 @@
         <Setter Property="Background" Value="{StaticResource PrimaryColor}" />
     </Style>
 
+    <Style Selector="controls|GmlButton.Minecraft">
+        <Setter Property="Background" Value="{StaticResource MinecraftBackground}" />
+        <Setter Property="Width" Value="400"></Setter>
+        <Setter Property="CornerRadius" Value="0"></Setter>
+        <Setter Property="BorderBrush" Value="#000"></Setter>
+        <Setter Property="BorderThickness" Value="2"></Setter>
+
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Button Name="PART_Button"
+                        Background="{TemplateBinding Background}"
+                        Command="{TemplateBinding Command}"
+                        CommandParameter="{TemplateBinding CommandParameter}"
+                        Padding="{TemplateBinding Padding}"
+                        IsDefault="{TemplateBinding IsDefault}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}">
+                    <TextBlock Text="{TemplateBinding Text}"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontFamily="{StaticResource MinecraftFont}"
+                               Foreground="{DynamicResource HeadlineColor}">
+
+                        <TextBlock.Effect>
+                            <DropShadowDirectionEffect
+                                ShadowDepth="3"
+                                Direction="35"
+
+                                Color="Black"
+                                Opacity="0.5"
+                                BlurRadius="0"/>
+                        </TextBlock.Effect>
+                    </TextBlock>
+                </Button>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+
     <Style Selector="controls|GmlButton.Primary:pointerover /template/ Button /template/ ContentPresenter">
         <Setter Property="Background" Value="{StaticResource PrimaryColorHover}" />
+    </Style>
+
+    <Style Selector="controls|GmlButton.Minecraft:pointerover /template/ Button /template/ ContentPresenter">
+        <Setter Property="Background" Value="{StaticResource MinecraftHoveredBackground}" />
+        <Setter Property="Width" Value="400"></Setter>
+        <Setter Property="CornerRadius" Value="0"></Setter>
+        <Setter Property="BorderBrush" Value="#000"></Setter>
+        <Setter Property="BorderThickness" Value="2"></Setter>
     </Style>
 
 </Styles>
