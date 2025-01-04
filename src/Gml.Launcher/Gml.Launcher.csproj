@@ -24,6 +24,7 @@
     <NSHighResolutionCapable>true</NSHighResolutionCapable>
     <CFBundleShortVersionString>Major</CFBundleShortVersionString>
     <CFBundleExecutable>Gml.Launcher</CFBundleExecutable>
+    <UseAppHost>true</UseAppHost>
   </PropertyGroup>
 
   <ItemGroup>
