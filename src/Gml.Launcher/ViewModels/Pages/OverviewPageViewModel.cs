@@ -31,6 +31,7 @@ using ReactiveUI;
 using ReactiveUI.Fody.Helpers;
 using Sentry;
 using Splat;
+using System.Runtime.InteropServices;
 
 namespace Gml.Launcher.ViewModels.Pages;
 
@@ -283,13 +284,16 @@ public class OverviewPageViewModel : PageViewModelBase
 
         var settings = await _storageService.GetAsync<SettingsInfo>(StorageConstants.Settings) ?? SettingsInfo.Default;
 
+        var osArchitecture = RuntimeInformation.OSArchitecture.ToString().ToLower().Replace("x", "");
+
         var localProfile = new ProfileCreateInfoDto
         {
+
             ProfileName = ListViewModel.SelectedProfile!.Name,
             RamSize = Convert.ToInt32(settings.RamValue),
             IsFullScreen = settings.FullScreen,
             OsType = ((int)_systemService.GetOsType()).ToString(),
-            OsArchitecture = Environment.Is64BitOperatingSystem ? "64" : "32",
+            OsArchitecture = osArchitecture,
             UserAccessToken = User.AccessToken,
             UserName = User.Name,
             UserUuid = User.Uuid,
