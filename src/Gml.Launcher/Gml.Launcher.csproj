@@ -23,7 +23,7 @@
     <NSPrincipalClass>NSApplication</NSPrincipalClass>
     <NSHighResolutionCapable>true</NSHighResolutionCapable>
     <CFBundleShortVersionString>Major</CFBundleShortVersionString>
-    <CFBundleExecutable>MiNEON</CFBundleExecutable>
+    <CFBundleExecutable>Gml.Launcher</CFBundleExecutable>
   </PropertyGroup>
 
   <ItemGroup>
